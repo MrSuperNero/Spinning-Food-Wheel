@@ -1,0 +1,99 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wheel {
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  width: 45%;
+  height: auto;
+}
+.wheel #wheel {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 50%;
+  border: 0px solid #F9EAE1;
+  overflow: hidden;
+  transition: transform 5s;
+  z-index: 1;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  box-shadow: 0px 0px 10px black;
+}
+.wheel #spin {
+  position: absolute;
+  top: 44%;
+  left: 44.6%;
+  width: 11%;
+  height: 11%;
+  border-radius: 50%;
+  border: 5px solid white;
+  background-color: #cccccc;
+  cursor: pointer;
+  transition: all 300ms;
+  z-index: 3;
+}
+.wheel #spin span {
+  font-weight: bold;
+  font-size: 1.5vw;
+  color: white;
+  text-shadow: 0 3px 3px #aaaaaa;
+}
+.wheel #spin:hover {
+  transform: scale(1.1);
+  transition-duration: 300ms;
+  box-shadow: 0 2px 10px black;
+}
+.wheel #spin:active {
+  transform: scale(0.9);
+  box-shadow: 0px 0px white;
+}
+.wheel #spin:focus {
+  outline: none;
+}
+.wheel .arrow {
+  position: absolute;
+  clip-path: polygon(55% 15%, 55% 35%, 100% 35%, 100% 65%, 55% 65%, 55% 85%, 0 50%);
+  background: #d7d7d7;
+  background: radial-gradient(circle, #e0e0e0 45%, #eeeeee 100%);
+  box-shadow: 0 10px 10px black;
+  top: 43.2%;
+  left: 51%;
+  height: 6vw;
+  width: 6vw;
+  transform: rotate(180deg);
+  z-index: 2;
+}
+
+.output {
+  position: absolute;
+  top: 20%;
+  left: 55%;
+  width: 40%;
+}
+.output h2 {
+  padding: 1%;
+  border: 2px transparent solid;
+  border-radius: 5px;
+  background: cornflowerblue;
+  font-family: "Varela Round", sans-serif;
+  text-align: center;
+  color: white;
+}
+.output .cuisines {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2em;
+  padding: 2%;
+}
+
+/*# sourceMappingURL=spinning_wheel.css.map */

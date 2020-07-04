@@ -6,7 +6,8 @@ spinButton.onclick = function() {
 
     let min = 1.5 * 360;     // min value
     let max = 10 * 360;     // max value
-    deg += Math.floor(Math.random() * (max - min)) + max;    // randomly spin
+    // deg += Math.floor(Math.random() * (max - min)) + max;    // randomly spin
+    deg = 45;
     let absolute_deg = deg % 360;
 
     // set degree limits for cuisines
